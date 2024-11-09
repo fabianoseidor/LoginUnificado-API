@@ -38,13 +38,16 @@ public class UserAplicativo implements Serializable{
 	private Boolean admin = Boolean.FALSE;
 	
 	@Column( name = "APROVADOR" )
-	private Boolean aprovador = Boolean.FALSE;;
+	private Boolean aprovador = Boolean.FALSE;
 	
 	@Column( name = "EXECUTOR" )
-	private Boolean executor = Boolean.FALSE;;
+	private Boolean executor = Boolean.FALSE;
 	
 	@Column( name = "OWNER")
-	private Boolean owner = Boolean.FALSE;;
+	private Boolean owner = Boolean.FALSE;
+	
+	@Column( name = "APLICATIVO_VIEW")
+	private Boolean aplicativoView = Boolean.FALSE;;
 	
 	@Column( name = "DT_CRIACAO", length = 20, nullable = false )
     private String dt_criacao;
@@ -64,6 +67,27 @@ public class UserAplicativo implements Serializable{
 //		System.out.println(dtf.format(now)); //01/02/2019 14:08:43		
 		dt_criacao = dtf.format(now);
 	}
+
+	
+	public Boolean getAplicativoView() {
+		return aplicativoView;
+	}
+
+
+	public void setAplicativoView(Boolean aplicativoView) {
+		this.aplicativoView = aplicativoView;
+	}
+
+
+	public UsersLogin getUsersLogin() {
+		return usersLogin;
+	}
+
+
+	public void setUsersLogin(UsersLogin usersLogin) {
+		this.usersLogin = usersLogin;
+	}
+
 
 	public UsersLogin getUsers() {
 		return usersLogin;
